@@ -44,4 +44,4 @@ docker run --rm -it \
   -v "${PWD}/nich-elia/tsconfig.spec.json":/usr/src/nichelia.com/nich-elia/tsconfig.spec.json \
   -v "${PWD}/nich-elia/tslint.json":/usr/src/nichelia.com/nich-elia/tslint.json \
   -p 80:4200 \
-  nichelia/nichelia.com:dev
+  nichelia/nichelia.com:dev "$@"

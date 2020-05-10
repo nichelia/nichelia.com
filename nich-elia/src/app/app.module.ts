@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { NeLogoComponent } from './ne-logo/ne-logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SmokeComponent } from './smoke/smoke.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NeLogoComponent
+    NeLogoComponent,
+    SmokeComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ RUN apk add --no-cache \
   bash \
   git \
   vim
-RUN npm install -g @angular/cli@9.1
+RUN npm install -g @angular/cli@9.1.5
 
 # Init project
 RUN cd $APP_DIR && \
