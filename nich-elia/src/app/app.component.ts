@@ -7,6 +7,7 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit
 {
+
   logo: boolean = true;
   minimiseLogo: boolean = false;
 

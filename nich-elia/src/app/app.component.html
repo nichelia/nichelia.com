@@ -1,3 +1,4 @@
-<app-ne-logo animate="rainbow" [ngClass]="logoClasses()"></app-ne-logo>
-<app-smoke></app-smoke>
+<div id="home-link" title="Home" [routerLink]="['/']">
+  <app-ne-logo animate="rainbow" [ngClass]="logoClasses()"></app-ne-logo>
+</div>
 <router-outlet></router-outlet>
