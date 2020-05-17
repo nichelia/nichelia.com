@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EXPERIMENTS } from './experiments';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-experiments',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperimentsComponent implements OnInit
 {
+
+  experiments = EXPERIMENTS;
 
   constructor() { }
 

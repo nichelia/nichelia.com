@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NeLogoComponent } from './ne-logo/ne-logo.component';
 import { SmokeComponent } from './smoke/smoke.component';
 import { ExperimentsComponent } from './experiments/experiments.component';
+import { HelloCubeComponent } from './hello-cube/hello-cube.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ExperimentsComponent } from './experiments/experiments.component';
     SmokeComponent,
     HomeComponent,
     ExperimentsComponent,
+    HelloCubeComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { ExperimentsComponent } from './experiments/experiments.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

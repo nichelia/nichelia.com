@@ -1,12 +1,12 @@
 // ne-logo.component.ts
-import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ne-logo',
   templateUrl: './ne-logo.component.svg',
   styleUrls: ['./ne-logo.component.css'],
 })
-export class NeLogoComponent implements OnInit, AfterViewInit
+export class NeLogoComponent implements AfterViewInit
 {
 
   draw: boolean = true;
@@ -15,8 +15,6 @@ export class NeLogoComponent implements OnInit, AfterViewInit
   @Input() animate: string = "";
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   ngAfterViewInit(): void
   {

@@ -1,0 +1,6 @@
+<mat-nav-list>
+  <div mat-subheader>Experiments</div>
+  <a mat-list-item routerLink="/experiments/{{experiment.id}}" *ngFor="let experiment of experiments">
+    {{ experiment.title }}
+  </a>
+</mat-nav-list>

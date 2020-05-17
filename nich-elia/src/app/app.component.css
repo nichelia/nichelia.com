@@ -6,7 +6,6 @@
 .logo
 {
   z-index: 1;
-  padding: 15px;
   position: absolute;
   top: calc(50% - 175px);
   left: calc(50% - 175px);
@@ -26,6 +25,7 @@
 
 .logo-minimise
 {
+  padding: 15px;
   top: 0;
   left: 0;
   width: 54px;
