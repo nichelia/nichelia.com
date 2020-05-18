@@ -29,16 +29,12 @@ export class HelloCubeComponent implements AfterViewInit
 
   private init()
   {
-    let width = this.elementView.nativeElement.offsetWidth;
-    let height = this.elementView.nativeElement.offsetHeight;
-
-    this.renderer = new THREE.WebGLRenderer({ alpha: false });
-    this.renderer.setSize(width, height);
-
+    const canvas = this.elementView.nativeElement;
+    this.renderer = new THREE.WebGLRenderer({canvas});
     this.scene = new THREE.Scene();
 
     const fov = 75;
-    const aspect = width/height;
+    const aspect = 2;
     const near = 0.1;
     const far = 5;
     const cameraZ = 2;
@@ -64,8 +60,6 @@ export class HelloCubeComponent implements AfterViewInit
       this.makeInstance(this.geometry, 0x8844aa, -2),
       this.makeInstance(this.geometry, 0xaa8844, 2),
     ];
-
-    this.elementView.nativeElement.appendChild(this.renderer.domElement);
   }
 
   private makeInstance(geometry, colour, positionX)
@@ -95,8 +89,27 @@ export class HelloCubeComponent implements AfterViewInit
     });
   }
 
+  private check_and_update_renderer_and_camera()
+  {
+    const pixelRatio = window.devicePixelRatio;
+    const width = this.elementView.nativeElement.clientWidth * pixelRatio | 0;
+    const height = this.elementView.nativeElement.clientHeight * pixelRatio | 0;
+
+    const needsUpdate = this.renderer.domElement.width !== width || this.renderer.domElement.height !== height;
+    if (needsUpdate)
+    {
+      console.log("About to update view...")
+      const aspect = width/height;
+      this.camera.aspect = aspect;
+      this.camera.updateProjectionMatrix();
+
+      this.renderer.setSize(width, height, false);
+    }
+  }
+
   private render()
   {
+    this.check_and_update_renderer_and_camera();
     this.renderer.render(this.scene, this.camera);
   }
 
