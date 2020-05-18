@@ -24,7 +24,7 @@ export class HelloCubeComponent implements AfterViewInit
   ngAfterViewInit(): void
   {
     this.init();
-    this.animate();
+    requestAnimationFrame(this.animate.bind(this));
   }
 
   private init()
