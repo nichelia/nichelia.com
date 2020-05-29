@@ -30,30 +30,30 @@ export class NeLogoComponent implements AfterViewInit
 
   private randomColours()
   {
-    var R = (x, y, t) =>
+    const R = (x, y, t) =>
     {
       return(Math.floor(192 + 64*Math.cos((x*x-y*y)/300 + t)));
     }
-    var G = (x, y, t) =>
+    const G = (x, y, t) =>
     {
       return(Math.floor(192 + 64*Math.sin((x*x*Math.cos(t/4)+y*y*Math.sin(t/3))/300)));
     }
-    var B = (x, y, t) =>
+    const B = (x, y, t) =>
     {
       return(Math.floor(192 + 64*Math.sin(5*Math.sin(t/9)+((x-100)*(x-100)+(y-100)*(y-100))/1100)));
     }
 
-    var animateColours = () =>
+    const animateColours = () =>
     {
       changeColour();
     }
 
-    var t = 0;
-    var changeColour = () =>
+    let t = 0;
+    const changeColour = () =>
     {
-      for(var x=0; x<=35 ;x++)
+      for(let x=0; x<=35 ;x++)
       {
-        for(var y=0; y<=35; y++)
+        for(let y=0; y<=35; y++)
         {
           let rgbColour = 'rgb('+R(x,y,t)+','+G(x,y,t)+','+B(x,y,t)+')';
           this.fillColour = rgbColour;
@@ -68,22 +68,22 @@ export class NeLogoComponent implements AfterViewInit
 
   private rainbowColours()
   {
-    var colours = ['#FF6BB4', '#FF191F', '#FF9027', '#FEFF36', '#008E12', '#00BFBF', '#420096', '#8F018D'];
-    var colour = 0;
+    const colours = ['#FF6BB4', '#FF191F', '#FF9027', '#FEFF36', '#008E12', '#00BFBF', '#420096', '#8F018D'];
+    let colour = 0;
 
-    var initColours = () =>
+    const initColours = () =>
     {
       this.fillColour = colours[colour];
       this.draw = false;
     }
 
-    var animateColours = () =>
+    const animateColours = () =>
     {
       this.smoothTransition = true;
       setInterval(changeColour, 3000);
     }
     
-    var changeColour = () =>
+    const changeColour = () =>
     {
       colour++;
       if (colour === colours.length)

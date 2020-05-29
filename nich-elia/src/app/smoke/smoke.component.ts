@@ -107,7 +107,7 @@ export class SmokeComponent implements AfterViewInit
 
   private evolveSmoke()
   {
-    var sp = this.smokeParticles.length;
+    let sp = this.smokeParticles.length;
     while(sp--)
     {
       this.smokeParticles[sp].rotation.z += (this.delta * 0.2);
