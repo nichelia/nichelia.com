@@ -18,7 +18,7 @@ Steps to replicate project from scratch:
 2. Make sure git is installed on the environment
     * Ensure your git email is configured `git config --global user.email [value]`
     * Ensure your git username is configured `git config --global user.name [value]`
-3. Create a new project named `nichelia`  
+3. Create a new project named `nich-elia`  
 `$ ng new nich-elia`  
 4. Select the following options
     * `Would you like to add Angular routing?` `y`

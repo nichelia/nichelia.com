@@ -24,7 +24,7 @@ DOCKER_IMAGE_TAG="nichelia/nichelia.com:dev"
 if [[ "$(docker images -q ${DOCKER_IMAGE_TAG} 2> /dev/null)" == "" ]]; then
   echo -e "${red}Custom docker image \"${DOCKER_IMAGE_TAG}\" not found.${no_color}"
   echo -e "${green}Building docker image: \"${DOCKER_IMAGE_TAG}\"...${no_color}"
-  docker build -f ./development/docker/nichelia.dockerfile -t "${DOCKER_IMAGE_TAG}" ./nich-elia
+  docker build -f ./development/docker/dev.dockerfile -t "${DOCKER_IMAGE_TAG}" ./nich-elia
 fi
 
 docker run --rm -it \
