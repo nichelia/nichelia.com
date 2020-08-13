@@ -15,6 +15,7 @@ import { SmokeComponent } from './smoke/smoke.component';
 import { ExperimentsComponent } from './experiments/experiments.component';
 import { HelloCubeComponent } from './hello-cube/hello-cube.component';
 import { PrimitivesComponent } from './primitives/primitives.component';
+import { CanvasClockComponent } from './canvas-clock/canvas-clock.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PrimitivesComponent } from './primitives/primitives.component';
     ExperimentsComponent,
     HelloCubeComponent,
     PrimitivesComponent,
+    CanvasClockComponent,
   ],
   imports: [
     BrowserModule,

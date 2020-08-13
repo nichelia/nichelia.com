@@ -91,7 +91,7 @@ export class HelloCubeComponent implements AfterViewInit
 
   private check_and_update_renderer_and_camera()
   {
-    const pixelRatio = window.devicePixelRatio;
+    const pixelRatio = window.devicePixelRatio || 1;
     const width = this.elementView.nativeElement.clientWidth * pixelRatio | 0;
     const height = this.elementView.nativeElement.clientHeight * pixelRatio | 0;
 
