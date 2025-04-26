@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'NeueHaasGroteskDisplay75Bold';
+  src: url('/assets/fonts/NeueHaasGroteskDisplay75Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Updated styles to allow the page to grow as needed */
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--surface-background);
+}
+
+.marquee-item {
+    color: black;
+    font-family: NeueHaasGroteskDisplay75Bold,sans-serif;
+    text-transform: uppercase;
+    font-size:min(11.5rem, 13.5vw);
+    font-style: normal;
+    font-weight: 700;
+    line-height: .97;
+}
