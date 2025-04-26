@@ -1,0 +1,25 @@
+<div class="loader-container">
+  <div class="digits-container">
+    <!-- Hundreds Digit -->
+    <div class="digit-slot" *ngIf="digits[0] !== null">
+      <div class="digit-reel" [style.transform]="getTransform(digits[0])">
+        <!-- Repeat 0-9 for the reel -->
+        <span *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">{{ i }}</span>
+      </div>
+    </div>
+    <!-- Tens Digit -->
+    <div class="digit-slot" *ngIf="digits[1] !== null">
+       <div class="digit-reel" [style.transform]="getTransform(digits[1])">
+        <!-- Repeat 0-9 for the reel -->
+        <span *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">{{ i }}</span>
+      </div>
+    </div>
+    <!-- Ones Digit (always present for 0-999) -->
+    <div class="digit-slot">
+       <div class="digit-reel" [style.transform]="getTransform(digits[2])">
+         <!-- Repeat 0-9 for the reel -->
+         <span *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">{{ i }}</span>
+      </div>
+    </div>
+  </div>
+</div>
