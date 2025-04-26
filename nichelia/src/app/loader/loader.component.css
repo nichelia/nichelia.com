@@ -21,7 +21,7 @@
   left: 20px;
   display: flex;
   color: white;
-  font-family: Helmet,sans-serif;
+  font-family: Helmet, sans-serif;
 }
 
 .digit-slot {
@@ -43,7 +43,7 @@
   flex-direction: column;
   align-items: center;
   will-change: transform;
-  height: 400px; /* enough for two digits */
+  height: 400px;
   transition: none;
 }
 
@@ -58,4 +58,8 @@
   line-height: 200px;
   text-align: center;
   flex-shrink: 0;
+}
+
+.digit-reel span:empty {
+  visibility: hidden;
 }
