@@ -4,13 +4,14 @@ FROM --platform=$BUILDPLATFORM node:22-slim as build
 
 WORKDIR /app
 
+RUN npm install -g firebase-tools
 RUN npm install -g @angular/cli@19
 
 COPY package*.json ./
 RUN npm ci
 
 COPY . .
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+CMD ["npm", "start"]
 
 FROM build as development
 
