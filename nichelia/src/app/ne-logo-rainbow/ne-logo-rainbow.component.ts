@@ -69,7 +69,7 @@ export class NeLogoRainbowComponent implements AfterViewInit {
 
   private rainbowColours()
   {
-    const colours = ['#FF6BB4', '#FF191F', '#FF9027', '#FEFF36', '#008E12', '#00BFBF', '#420096', '#8F018D'];
+    const colours = ['#FF6599', '#FF0000', '#FF8E00', '#FFFF00', '#008E00', '#00C0C0', '#400098', '#8E008E'];
     let colour = 0;
 
     const initColours = () =>
