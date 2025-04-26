@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'NeueHaasGroteskDisplay75Bold';
+  src: url('/assets/fonts/NeueHaasGroteskDisplay75Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:host {
+  display: block;
+  background-color: #f7f7f5;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.message {
+  align-self: flex-start;
+  color: black;
+  font-family: NeueHaasGroteskDisplay75Bold,sans-serif;
+  text-transform: uppercase;
+  font-size:min(11.5rem, 13.5vw);
+  font-style: normal;
+  font-weight: 700;
+  line-height: .97;
+  padding: 50px 10px 10px 10px;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.footer-bottom {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: normal;
+}
+
+.footer-bottom md-button {
+  line-height: normal;
+}

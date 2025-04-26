@@ -1,14 +1,27 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
 import { CommonModule } from '@angular/common';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, LoaderComponent, HeaderComponent, RouterOutlet],
+  imports: [CommonModule, LoaderComponent, HeaderComponent, FooterComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('bottomSlide', [
+      transition(':leave', [
+        style({ opacity: 1 }),
+        animate('1200ms cubic-bezier(0.2, 1, 0.3, 1)', style({
+          opacity: 1,
+          transform: 'translateY(100vh)'
+        }))
+      ])
+    ])
+  ]
 })
 export class AppComponent implements AfterViewInit {
   isLoading = true; // Controls loader visibility
