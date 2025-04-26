@@ -1,0 +1,1 @@
+// This file is now deprecated as the loader behavior has been integrated into the LoaderComponent.
