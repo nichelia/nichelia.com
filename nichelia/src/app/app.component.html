@@ -1,7 +1,12 @@
-<div id="home-link" title="Home" routerLink="/">
-  <app-ne-logo animate="rainbow" [ngClass]="logoClasses()"></app-ne-logo>
-</div>
-<div id="app-version">
-  <button mat-button disabled>{{ version }}</button>
+<div id="header">
+  <div id="home-link" title="Home" routerLink="/">
+    <app-ne-logo 
+      [imageData]="imageData" 
+      [params]="shaderParams">
+    </app-ne-logo>
+  </div>
+  <div id="app-version">
+    <button mat-button disabled>{{ version }}</button>
+  </div>
 </div>
 <router-outlet></router-outlet>

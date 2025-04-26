@@ -1,0 +1,45 @@
+/* ne-logo.component.css */
+svg
+{
+  height: 100%;
+  width: 100%;
+}
+
+.smooth-transition
+{
+    -webkit-transition: all 2s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+     -moz-transition: all 2s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       -o-transition: all 2s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+          transition: all 2s cubic-bezier(0.550, 0.085, 0.680, 0.530);
+
+  -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+     -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+       -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+          transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+}
+
+.draw path
+{
+    fill-opacity: 0;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-dasharray: 3319;
+    stroke-dashoffset: 3319;
+    animation-name: draw;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes draw {
+  85% {
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-width: 0;
+    fill-opacity: 1;
+  }
+}

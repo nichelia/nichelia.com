@@ -4,13 +4,13 @@ FROM --platform=$BUILDPLATFORM node:22-slim as build
 
 WORKDIR /app
 
-# RUN npm install -g @angular/cli@13
+RUN npm install -g @angular/cli@19
 
-# COPY package*.json ./
-# RUN npm ci
+COPY package*.json ./
+RUN npm ci
 
 COPY . .
-# CMD ["ng", "serve", "--host", "0.0.0.0"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
 
 FROM build as development
 
