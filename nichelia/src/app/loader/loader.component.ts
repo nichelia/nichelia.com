@@ -59,7 +59,7 @@ export class LoaderComponent implements OnInit, OnDestroy {
     const new_two = this.digit_two;
     const new_three = this.digit_three;
 
-    // Animate hundreds (null <-> number)
+    // Animate hundreds (null <-> number) immediately
     if (new_one !== this.prev_digit_one) {
       this.displayed_digit_one = new_one;
       this.animating_one = true;
@@ -71,31 +71,34 @@ export class LoaderComponent implements OnInit, OnDestroy {
         this.cdr.detectChanges();
       }, 500);
     }
-    // Animate tens (null <-> number)
+    // Animate tens (null <-> number) after 100ms
     if (new_two !== this.prev_digit_two) {
-      this.displayed_digit_two = new_two;
-      this.animating_two = true;
-      this.cdr.detectChanges();
       setTimeout(() => {
-        this.prev_digit_two = new_two;
         this.displayed_digit_two = new_two;
-        this.animating_two = false;
+        this.animating_two = true;
         this.cdr.detectChanges();
-      }, 500);
+        setTimeout(() => {
+          this.prev_digit_two = new_two;
+          this.displayed_digit_two = new_two;
+          this.animating_two = false;
+          this.cdr.detectChanges();
+        }, 500);
+      }, 100);
     }
-    // Animate ones
+    // Animate ones after 200ms
     if (new_three !== this.prev_digit_three) {
-      this.displayed_digit_three = new_three;
-      this.animating_three = true;
-      this.cdr.detectChanges();
       setTimeout(() => {
-        this.prev_digit_three = new_three;
         this.displayed_digit_three = new_three;
-        this.animating_three = false;
+        this.animating_three = true;
         this.cdr.detectChanges();
-      }, 500);
+        setTimeout(() => {
+          this.prev_digit_three = new_three;
+          this.displayed_digit_three = new_three;
+          this.animating_three = false;
+          this.cdr.detectChanges();
+        }, 500);
+      }, 200);
     }
-    // Remove all first-render special cases
     this.cdr.detectChanges();
   }
 
