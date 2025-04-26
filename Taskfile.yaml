@@ -1,0 +1,53 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  ABOUT: nichelia.com
+  PROJECT: nichelia
+  VERSION: 0.0.0
+  DEV_ENV: nichelia-dev
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.ABOUT}}"
+    silent: true
+  
+  dev:
+    summary: |
+      Run the project in development
+      
+      Creates the Docker Dev Environment.
+      Opens the environment in VSCode.
+    cmds:
+      - docker dev create --name "{{.DEV_ENV}}" "{{.PWD}}"
+      - docker dev open "{{.DEV_ENV}}"
+  dev-check:
+    summary: |
+      Util to check if your system is ready for Docker Dev Environments.
+      
+      Outputs should match the below:
+      GIT         VSCODE        REMOTE_CONTAINERS
+      true        true          true
+    cmds:
+      - docker dev check
+  dev-logs:
+    summary: |
+      Util to show docker logs.
+
+      Displays logs of all docker containers of the project.
+    cmds:
+      - docker ps -f name="{{.DEV_ENV}}" -aq | xargs -L 1 docker logs
+  dev-cleanup:
+    summary: |
+      Util to cleanup dev task.
+
+      Removes any created Docker Dev Environments for this project.
+    cmds:
+      - docker dev rm "{{.DEV_ENV}}"
+    ignore_error: true
+
+  cleanup:
+    cmds:
+      - task: dev-cleanup

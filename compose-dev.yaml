@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  nichelia:
+    build:
+      context: nichelia
+      target: development
+    entrypoint:
+      - sleep
+      - infinity

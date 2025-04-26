@@ -1,0 +1,25 @@
+<div class="loader-container">
+  <div class="digits-container">
+    <div class="digit-slot">
+      <div class="digit-reel" [ngClass]="{'animating': animating_one}"
+            [style.transform]="animating_one ? 'translateY(0)' : 'translateY(-200px)'">
+        <span>{{ displayed_digit_one === null ? '' : displayed_digit_one }}</span>
+        <span>{{ prev_digit_one === null ? '' : prev_digit_one }}</span>
+      </div>
+    </div>
+    <div class="digit-slot">
+      <div class="digit-reel" [ngClass]="{'animating': animating_two}"
+            [style.transform]="animating_two ? 'translateY(0)' : 'translateY(-200px)'">
+        <span>{{ displayed_digit_two === null ? '' : displayed_digit_two }}</span>
+        <span>{{ prev_digit_two === null ? '' : prev_digit_two }}</span>
+      </div>
+    </div>
+    <div class="digit-slot">
+      <div class="digit-reel" [ngClass]="{'animating': animating_three}"
+            [style.transform]="animating_three ? 'translateY(0)' : 'translateY(-200px)'">
+        <span>{{ displayed_digit_three === null ? '' : displayed_digit_three }}</span>
+        <span>{{ prev_digit_three === null ? '' : prev_digit_three }}</span>
+      </div>
+    </div>
+  </div>
+</div>

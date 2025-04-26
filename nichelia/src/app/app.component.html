@@ -1,7 +1,6 @@
-<div id="home-link" title="Home" routerLink="/">
-  <app-ne-logo animate="rainbow" [ngClass]="logoClasses()"></app-ne-logo>
+<app-loader *ngIf="isLoading" @bottomSlide [progress]="progress"></app-loader>
+<div *ngIf="!isLoading">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
-<div id="app-version">
-  <button mat-button disabled>{{ version }}</button>
-</div>
-<router-outlet></router-outlet>
