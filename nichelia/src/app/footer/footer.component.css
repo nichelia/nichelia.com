@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
 }
 
 .message {
@@ -26,21 +27,42 @@
   font-weight: 700;
   line-height: .97;
   padding: 50px 10px 10px 10px;
+  width: 100vw;
+  cursor: default;
+}
+
+.message-image-row {
+  display: flex;
+  align-items: center;
+  gap: min(1.5rem, 1.5vw);
+  width: 100%;
+  flex: 1 1 100%;
+  justify-content: flex-start;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: min(160px, 11.5vw);
+  height: min(160px, 11.5vw);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: none;
 }
 
 .flex-spacer {
   flex-grow: 1;
 }
 
-.footer-bottom {
+.bottom {
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  line-height: normal;
-}
-
-.footer-bottom md-button {
   line-height: normal;
 }

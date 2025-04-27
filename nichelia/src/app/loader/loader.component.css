@@ -13,6 +13,7 @@
   background-color: black;
   overflow: hidden;
   z-index: 9999;
+  cursor: default;
 }
 
 .digits-container {
