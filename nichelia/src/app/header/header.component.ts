@@ -2,13 +2,13 @@ import { Component, Inject } from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Renderer2 } from '@angular/core';
-import { NeLogoComponent, ShaderParams } from '../ne-logo/ne-logo.component';
+import { ShaderParams } from '../ne-logo/ne-logo.component';
 import { NeLogoRainbowComponent } from '../ne-logo-rainbow/ne-logo-rainbow.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, NeLogoComponent, NeLogoRainbowComponent],
+  imports: [CommonModule, MatButtonModule, NeLogoRainbowComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

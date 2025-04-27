@@ -1,0 +1,9 @@
+[
+  { "name": "NOW", "url": "https://now.nichelia.com" },
+  { "name": "RESUME", "url": "https://resume.nichelia.com" },
+  { "name": "CLOCK", "url": "https://clock.nichelia.com" },
+  { "name": "BAO", "url": "https://bao.nichelia.com" },
+  { "name": "CYPRUS", "url": "https://cyprus.nichelia.com" },
+  { "name": "BRAT", "url": "https://brat.nichelia.com", "class": "brat" },
+  { "name": "BLACK LIVES MATTER", "url": "https://icannotbreathe.nichelia.com", "class": "blm" }
+]

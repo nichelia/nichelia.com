@@ -1,0 +1,3 @@
+2: { "name": "BLOG", "url": "https://blog.nichelia.com" },
+4: { "name": "RESUME", "url": "https://resume.nichelia.com" },
+8: { "name": "MOON", "url": "https://moon.nichelia.com" },
