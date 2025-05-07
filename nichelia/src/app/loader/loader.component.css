@@ -10,7 +10,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: #000;
   overflow: hidden;
   z-index: 9999;
   cursor: default;
@@ -21,7 +21,7 @@
   bottom: 20px;
   left: 20px;
   display: flex;
-  color: white;
+  color: #fff;
   font-family: Helmet, sans-serif;
 }
 

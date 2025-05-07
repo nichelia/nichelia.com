@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-/* Updated styles to allow the page to grow as needed */
 .marquee-wrapper {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,7 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: var(--surface-background);
+  background-color: #000;
 }
 .marquee-wrapper a {
     text-decoration: none;
@@ -28,7 +27,7 @@
 .marquee-wrapper a:nth-child(8n+8) { background-color: #8E008E; }
 
 .marquee-item {
-    color: black;
+    color: #000;
     font-family: NeueHaasGroteskDisplay75Bold,sans-serif;
     text-transform: uppercase;
     font-size:min(11.5rem, 13.5vw);
@@ -45,5 +44,5 @@
   background-color: rgb(0, 0, 0) !important;
 }
 .blm .marquee-item {
-  color: white !important;
+  color: #fff !important;
 }
