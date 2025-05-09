@@ -1,0 +1,10 @@
+<div class="cube-flip-perspective"
+     (mouseenter)="isFlipped = true"
+     (mouseleave)="isFlipped = false">
+  <div class="cube-flip-cube" [class.flipped]="isFlipped">
+    <div class="cube-flip-face cube-flip-front" [innerHTML]="front"></div>
+    <div class="cube-flip-face cube-flip-top" [innerHTML]="back"></div>
+    <div class="cube-flip-face cube-flip-back" [innerHTML]="front"></div>
+    <div class="cube-flip-face cube-flip-bottom" [innerHTML]="front"></div>
+  </div>
+</div>
